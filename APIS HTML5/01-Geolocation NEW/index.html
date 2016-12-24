@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocalización</title>
+	<meta charset="utf-8">
+<style type="text/css">
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	#mapa{
+		height: 100%;
+		width: 100%;
+	}
+	input, button{
+		width: 100%;
+	}
+	#actual, #controles{
+		z-index: 10;
+		position: absolute;
+		bottom: 25px;
+		right: 25px;
+		border: 1px solid #0000FF;
+		border-radius: 15px;
+		background: #FFF;
+		padding: 25px;
+	}
+	#controles{
+		bottom: 175px;
+	}
+</style>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+</head>
+<body>
+<div id="mapa"></div>
+<div id="controles">
+	<button onclick="ocultarControles();">Ocultar controles</button><br>
+	<button onclick="mostrarNavigation();">Mostrar Navigation Control</button><br>
+	<button onclick="mostrarScale();">Mostrar Scale Control</button><br>
+	<button onclick="mostrarCapaTrafico();">Mostrar Capa Tráfico</button><br>
+	<button onclick="mostrarCapaBici();">Mostrar Capa Bici</button><br>
+	<input type="text" id="txtDireccion" placeholder="Introduce una latitud-longitud o una dirección"><br>
+	<button onclick="obtenerCoordenadas();">Obtener coordenadas</button><br>
+	<button onclick="obtenerDireccion();">Obtener dirección</button><br>
+	<button onclick="obtenerRuta();">Obtener ruta</button><br>
+	<button onclick="ocultarRuta();">Ocultar ruta</button><br>
+	<button onclick="verStreetView();">Ver StreetView</button><br>
+</div>
+<div id="actual"></div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Arquitectura</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="dom.js"></script>
+	<style type="text/css">
+	#soluciones {
+		padding: 0px;
+		position: absolute;
+		top:10px;
+		left:30px;
+		width: 	600px;
+		height: 90px;
+		border: 1px  solid white;
+		box-shadow: 3px 3px 5px white;
+		overflow-y: scroll;
+	}
+	.oculto {
+		display: none; 
+	}
+	.visible { 
+		display: inline;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrapper"><!-- #Envoltura -->
+
+		<nav><!--Inicio barra de navegacion -->
+			<div class="menu">
+				<ul>  <!-- Menu principal -->
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Productos</a></li>
+					<li><a href="#">Servicios</a></li>
+					<li><a href="#">Localización</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</div>
+		</nav><!-- Final barra de navegación -->
+
+		<header> <!-- cabecera -->
+			<p id="soluciones"></p>
+		</header><!-- fin de cabecera-->
+
+		<section id="main"><!-- #Cuerpo principal y barra lateral -->
+			<section id="content"><!-- Contenido -->
+
+				<article>
+					<h2><a href="http://www.areafor.com">Titulo primer articulo</a></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. area Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+				</article>
+
+				<article>
+					<h2><a href="http://www.diariovasco.com">Titulo segundo articulo</a></h2>
+					<p id="primero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p> <a href="#" onClick="muestra();">Mostrar/Ocultar contenido adicional</a>
+					<div id="segundo" class="oculto">
+						<p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+						<p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					</div>
+				</article>
+
+			</section><!--final del contenido -->
+
+			<aside id="sidebar"><!-- barra lateral -->
+				<h3>Ejercicios manejo del DOM</h3>
+				<ul>
+					<li><a href="#" onClick="numEnlaces();">Nº Enlaces de la página</a></li>
+					<li><a href="#" onClick="dirEnlaces();">Direcciones a la que enlazan enlace</a></li>
+					<li><a href="#" onClick="enlaceesp();">Enlaces que apuntan a www.area.com</a></li>
+					<li><a href="#" onClick="anade();">Añade nuevos elementos a la lista de amigos del footer(innerHTML)</a></li>
+					<li><a href="#" onClick="anade2();">Añade nuevos elementos a la lista de amigos del footer(appendChild)</a></li>
+					<li><a href="#" onClick="informacion();">Información del documento</a></li>
+
+				</ul>
+
+				
+				<h3>Contacta con nosotros</h3>
+				<ul>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+				</ul>
+
+			</aside><!--final de la barra lateral -->
+
+
+		</div><!-- #envoltura -->
+		<footer>
+			<section id="footer-area">
+
+				<section id="footer-outer-block"> 
+					<aside class="footer-segment">  <!-- primera columna del pie-->
+						<h4>Amigos</h4>
+						<ul id="lista">
+							<li><a href="#">Enlace 1</a></li>
+							<li><a href="#">Enlace 2</a></li>
+							<li><a href="#">Enlace 3</a></li>
+						</ul>
+					</aside><!-- final de la primera columna del pie -->
+
+					<aside class="footer-segment"> <!--segunda columna del pie-->
+						<h4>Algunas cosas</h4>
+						<ul>
+							<li><a href="#">Enlace 1</a></li>
+							<li><a href="#">Enlace 2</a></li>
+							<li><a href="#">Enlace 3</a></li>
+						</ul>
+					</aside><!-- final de la segunda columna del  pie -->
+
+					<aside class="footer-segment"> <!-- tercera columna del pie  -->
+						<h4>Nuevas cosas</h4>
+						<ul>
+							<li><a href="#">Enlace 1</a></li>
+							<li><a href="#">Enlace 2</a></li>
+							<li><a href="#">Enlace 3</a></li>
+						</ul>
+					</aside><!-- final de la tercera columna del pie -->
+					
+					<aside class="footer-segment">  <!-- cuarta columna del pie  -->
+						<h4>Texto variado</h4>
+						<p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+					</aside> <!-- final de la cuarta columna del pie -->
+
+				</section> <!-- final de la seccion interior del pie -->
+
+			</section><!-- final  de la seccion exterior del pie -->
+		</footer>
+	</body>
+
+	</html>

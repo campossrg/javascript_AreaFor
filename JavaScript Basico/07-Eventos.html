@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset=utf8>
+	<script type="text/javascript" src="js/07-Eventos.js"></script>
+</head>
+<body>
+	<input type="button" value="Mostrar alert" id="btMostrar"><br>
+	<input type="button" value="Eliminar listener btMostrar" id="btEliminarListener">
+	<! --  Propagacion de eventos -- >
+	<! -- De hijo a padre -- >
+	<div id="padre1">
+		<p id="hijo1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<! -- De padre a hijo -- >
+	<div id="padre2">
+		<p id="hijo2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<! -- Cuando deseamos utilizar el evento en la fucnion y realizamos 
+	la asignacion desde el html debemnos pasar el paramatro event -- >
+	<a href="http://www.google.es" target="_black" onclick="comprobarClicks(event);">Ir a google</a>
+	<form method="GET" action="procesarFormulario.html">
+		Nombre: <input type="text" id="txtNombre" name="txtNombre"><br>
+		<input type:"submit" value="Enviar formulario" onclick="comporbarFormulario(event);">
+	</form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="js/09-ObjetosVehiculos.js"></script>
+<script type="text/javascript" src="js/09-ObjetosCuentas.js"></script>
+<style type="text/css">
+body{
+	font-size: 18px;
+}
+div{
+border: 1px solid #0000FF;
+border-radius: 5px;
+padding: 10px;
+	}
+</style>
+</head>
+<body>
+Realizar los siguientes ejercicios modelando las clases necesarias para representar la información pertinente. Ademas se debe tener en cuenta que los eventos deben ser asignados desde JavaScript<br>
+
+<h2>Ejercicio Vehículos</h2>
+<p>Se desea tener un control de vehículos que siga las siguientes reglas:</p>
+<ul>
+<li>Cada vehículo dispone de una matrícula, marca y modelo que serán solicitados en el momento de la creación del vehículo</li>
+<li>Se deben reflejar los vehículos disponibles en un select cuyo id es vehiculos</li>
+<li>Los vehiculos tambien disponen de una velocidad. Dicha velocidad sera modificada a traves de los métodos acelerar y frenar que incrementan/decrementan la velocidad en 10 respectivamente. Se debe tener en cuenta que un vehículo no puede alcanzar más de 200km/h y que su velocidad no puede ser inferior a 0km/h</li>
+<li>Dispondremos de los botones Acelerar, frenar y ver la velocidad para realizar dichas acciones sobre el vehículo seleccionado</li>
+</ul>
+<div>
+Vehículos: <select id="vehiculos"></select><input type="text" value=" " id="txtVelocidad"><br>
+<input type="button" value="Añadir" id="btAnadirVehiculo">
+<input type="button" value="Eliminar" id="btEliminarVehiculo">
+<input type="button" value="Acelerar" id="btAcelerar">
+<input type="button" value="Frenar" id="btFrenar">
+<input type="button" value="Ver velocidad" id="btVerVelocidad">
+</div>
+
+
+<h2>Ejercicio Cuentas</h2>
+<p>Realizar un pequeño control de cuentas en JavaScript teniendo en cuenta que:</p>
+<ul>
+<li>Cada cuenta dispone de un nombre y de un saldo inicial que deberemos indicar al crear la cuenta</li>
+<li>Cada vez que creemos una cuenta su nombre debera aparecer en el select con id cuentas para su posterior selección</li>
+<li>Una vez tengamos seleccionada una cuenta podremos pulsar el botón de ingreso o gasto. Tras esto se nos solicitara la descripción del gasto o el ingreso y el importe en cuestión</li>
+<li>Siempre que pulsemos el botón Ver movimientos se nos mostrara por consola el nombre la cuenta junto con su saldo y un resumen de los movimientos realizados hasta el momento</li>
+</ul>
+<div>
+Cuentas: <select id="cuentas"></select><br>
+<input type="button" value="Añadir" id="btAnadirCuenta">
+<input type="button" value="Eliminar" id="btEliminarCuenta">
+<input type="button" value="Ingreso" id="btIngreso">
+<input type="button" value="Gasto" id="btGasto">
+<input type="button" value="Ver movimientos" id="btVerMovimientos">
+</div>
+
+
+<h2>Ejercicio Escuela</h2>
+<p>Se desea llevar un control sobre los cursos de una escuela teniendo en cuenta lo siguiente:</p>
+<ul>
+<li>De los alumnos de escuela se desea saber su nombre, dni y edad</li>
+<li>De los cursos se desea saber su nombre, descripción, nº de horas y los alumnos que están inscritos</li>
+<li>Se debe poder consultar si un alumno esta inscrito o no en el curso</li>
+<li>Los alumnos seran inscritos mediante un método de la clase curso que comprobará si el alumno ya forma parte del curso o no</li>
+<li>Realizar las tareas que se plasman en los botones inferiores</li>
+</ul>
+<div>
+Alumnos: <select id="alumnos"></select><br>
+Cursos: <select id="cursos"></select><br>
+<input type="button" value="Crear alumno" id="btCrearAlumno"><br>
+<input type="button" value="Crear curso" id="btCrearCurso"><br>
+<input type="button" value="Inscribir alumno" id="btInscribirAlumno"><br>
+<input type="button" value="Dar de baja alumno" id="btDarDeBajaAlumno"><br>
+<input type="button" value="Listar alumnos de curso" id="btListarAlumnosDeCurso"><br>
+</div>
+</body>
+</html>

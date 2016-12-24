@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAGINA PRINCIPAL</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/index.js"></script>
+	<style type="text/css">
+		span
+		{
+			padding-right: 5px;
+			color: #FFF;
+		}
+		.cabecera
+		{
+			background: #06F;
+			border-radius: 10px;
+			padding: 10px;
+			color: #FFF;
+		}
+		#divNotas
+		{
+			border-radius: 10px;
+			color: #FFF;
+			float: left;
+			margin: 10px;
+			padding: 10px;
+		}
+		.nota
+		{
+			border-radius: 10px;
+			width: 200px;
+			color: #000;
+			float: left;
+			margin: 10px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<p id="pBienvenida"></p>
+<div class="cabecera">
+	<span>Categoria: </span>
+	<select id="cmbCategoria">
+		<option value="">Todas</option>
+		<option value="Persona1">Persona1</option>
+		<option value="Familia">Familia</option>
+		<option value="Amigos">Amigos</option>
+	</select>
+	<span>Texto de la nota: </span>
+	<input type="text" id="txtTextoNota">
+	<input type="button" value="Nueva nota" id="btNuevaNota">
+</div>
+<div id="divNotas"></div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="js/06_Repaso_javascript.js"></script>
+</head>
+<body>
+<h2>Ejercicio 1</h2>
+<p>
+Crear un array llamado meses y utilizando dicho array mostrar el nombre del mes actual.
+</p>
+<button onclick="mesActual();">Mostrar mes actual</button>
+<hr>
+<h2>Ejercicio 2</h2>
+<p>
+Utilizando el siguiente array var valores = [true,5,false,"Hola",3,"Adios"] realizar las siguientes acciones
+<ol>
+<li>Escribir en consola la palabra mas larga de las que aparecen en el array</li>
+<li>Utilizando los valores booleanos mostrar el resultado de realizar las operaciones lógicas AND y OR por consola</li>
+<li>Utilizando los valores numéricos realizar las operaciones de suma, resta y multiplicación y mostrar el resultado por consola</li>
+</ol>
+</p>
+<button onclick="arrayDistintosTipos();">Probar</button>
+<hr>
+<h2>Ejercicio 3</h2>
+<p>
+Dado un array de números que se solicitara al usuario. Mostrar en un alert cada uno de dichos números en una linea indicando si es positivo, negativo o igual a cero
+</p>
+<button onclick="arrayNumeros();">Analizar números</button>
+<hr>
+<h2>Ejercicio 4</h2>
+<p>
+Se desea calcular dado el numero del DNI su letra asociada. El calculo de la letra del dni se basa en obtener el resto de la division entre el numero del DNI y 23. Cogiendo ese numero como indice la letra asociada se obtendrá del siguiente array var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];<br>
+Se debe solicitar al usuario su numero de DNI y tras comprobar que es numérico y que esta formado por 8 dígitos se mostrara su letra asociada 
+</p>
+<button onclick="letraDni();">Obtener letra DNI</button>
+<hr>
+
+<h2>Ejercicio 5</h2>
+<p>
+Calcular el factorial del numero introducido en la siguiente caja de texto. <input type="text" id="inputEj5"> 
+</p>
+<button onclick="factorial();">Calcular factorial</button>
+<hr>
+
+<h2>Ejercicio 6</h2>
+<p>
+Escribir una función que coja el valor de la siguiente caja de texto y devuelva como resultado un alert que indica si el número es par, impar o no es valido. <input type="text" id="inputEj6"> 
+</p>
+<button onclick="parImpar();">Probar</button>
+<hr>
+
+<h2>Ejercicio 7</h2>
+<p>
+Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
+</p>
+<button onclick="palindromo();">Palíndromo</button>
+<hr>
+
+<h2>Ejercicio 8</h2>
+<p>
+Definir una función que muestre el número de elementos tipo button que contiene el documento
+</p>
+<button onclick="numeroButtons();">Número de buttons</button>
+<hr>
+
+<h2>Ejercicio 9</h2>
+<p>
+Definir dos funciones que basándose en el valor seleccionado del desplegable añadan o eliminen elementos a la lista seleccionada. Se deberá solicitar al usuario el html a añadir al elemento de la lista en caso de inserción
+<select id="comboEj9">
+<option value="lista1">Lista 1</option>
+<option value="lista2">Lista 2</option>
+</select>
+</p>
+<button onclick="anadir();">Añadir</button>
+<button onclick="eliminar();">Eliminar</button><br>
+Lista uno<br>
+<ul id="lista1">
+
+</ul><br>
+Lista dos<br>
+<ul id="lista2">
+
+</ul>
+
+<hr>
+
+<h2>Ejercicio 10</h2>
+<p>
+Definir una función que escriba en consola la siguiente información de elementos del DOM:<br>
+- Número de h2 del documento<br>
+- Textos de los diferentes h2 del documento<br>
+- Número de hr del documento<br>
+- Valores y textos mostrados de los elementos option<br>
+- Textos de los diferentes botones del documento junto con la función que ejecutan al realizar click<br>
+</p>
+<button onclick="analisisDom();">Analizar DOM</button>
+<hr>
+
+<h2>Ejercicio 11</h2>
+<p>
+Mostrar por consola las direcciones de los enlaces contenidos en los elementos de la lista menu
+<ul id="menu">
+	<li><a href="pagina1.html">Pagina uno</a></li>
+	<li><a href="pagina2.html">Pagina dos</a></li>
+	<li><a href="pagina3.html">Pagina tres</a></li>
+</ul>
+</p>
+<button onclick="mostrarLinksMenu();">Mostrar enlaces menu</button>
+<hr>
+
+<h2>Ejercicio 12</h2>
+<p>
+Dado el div inferior realizar las siguientes tareas sobre los elementos de dicho div cuando se pulse el boton pertinente:
+<ol>
+<li>Solicitar y añadir el texto de un nuevo elemento de la lista ul</li>
+<li>Solicitar y añadir el texto de un nuevo elemento de la lista ol</li>
+<li>Eliminar el primer elemento de la lista ul</li>
+<li>Eliminar el ultimo elemento de la lista ol</li>
+<li>Mostrar el número de enlaces que no apunta a www.areafor.com</li>
+<li>Mostrar el número de enlaces cuyo texto es Enlace interno</li>
+</ol>
+<div id="divEj12" style="border:1px solid #0000FF;border-radius:5px;padding:15px;">
+	Lista ul<br>
+	<ul></ul><br>
+	Lista ol<br>
+	<ol></ol><br>
+	<a href="#">Enlace interno</a><br>
+	<a href="www.areafor.com">Area</a><br>
+	<a href="#">Enlace interno</a><br>
+	<a href="www.areafor.com">Enlace interno</a><br>
+</div>
+</p>
+<button onclick="anadirUl();">Añadir a ul</button><br>
+<button onclick="anadirOl();">Añadir a ol</button><br>
+<button onclick="eliminarPrimeroUl();">Eliminar primero de ul</button><br>
+<button onclick="eliminarUltimoOl();">Eliminar ultimo de ol</button><br>
+<button onclick="enlacesNoAreafor();">Nº Enlaces no www.areafor.com</button><br>
+<button onclick="enlacesTexto();">Nº Enlaces con texto Enlace interno</button><br>
+<hr>
+
+</body>
+</html>

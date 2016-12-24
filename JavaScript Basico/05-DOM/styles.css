@@ -1,0 +1,282 @@
+
+
+/* Reinicamos todo el documento de margenes y paddings a 0 ,
+ ya que puede tener valores por defecto que nos causen problemasreset 
+ */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* Incicializa todos las cajas como bloque 
+
+    El elemento no permitirá la ubicación de elementos adyacentes.
+    En caso de que sus dimensiones no sean determinadas, ocupará todo el ancho disponible dentro del elemento contenedor, 
+    y tendrá una altura que será determinada por el contenido.
+    Cuando se determina el ancho, el elemento ocupará solo la extensión determinada, pero sin permitir la ubicación de elementos
+    adyacentes, aún cuando haya espacio suficiente para que se ubique en él otro elemento.
+
+ */
+header, footer, section, aside, nav, article {
+display: block;
+}
+
+/* Valores por defecto para todo el cuerpo */
+body {
+line-height: 1; 
+background: #1F4677; /* Color de fondo*/
+font-family: Verdana, Arial, Helvetica, sans-serif; /* Tipo de letra */
+color: #666; /* color del texto */
+font-size: 14px; /* tamaño de la letra */
+line-height: 18px; 
+}
+	
+/* estilos por disposicion */
+/*
+			------------ Envoltura principal -----------
+		Asignamos el ancho por defecto para todo el documento
+		Asignamos los margenes laterales  0 y auto centrandose la página
+		Ponemos un poco de sombra
+ */
+
+#wrapper {  	
+width: 940px;
+margin: 0 auto;
+margin-top: 5px;
+margin-bottom: 5px;
+-webkit-box-shadow: 3px 3px 7px white; 
+-moz-box-shadow: 3px 3px 7px white;
+box-shadow: 3px 3px 7px white;
+}
+
+/*
+			------------- Barra de navegacion superior --------------------
+	El mismo ancho que le contenedor tambien centrado ,
+	 una latura fija de 69 y una imagen de fondo.
+*/
+nav { 			
+width: 940px; 
+height: 69px;
+margin: 0 auto;
+background: #1F4677 url(images/blueprintpaper.png) repeat-x;
+}
+
+/*
+		--------------------- Cabecera -----------------------
+		
+  */
+header { 
+position:relative;
+width: 940px;
+height: 110px;
+margin: 0 auto;
+background: #D2E1F6;
+}
+
+/* Cuerpo principal */
+#main {
+width: 940px;
+margin: 0 auto;
+padding: 10px 0 10px 0;
+background: #fff;
+overflow: hidden;
+}
+
+/* Contendio dl cuerpo principal */
+#content {
+	float: right;
+	width: 590px;
+	margin-right: 30px;
+}
+
+/* Barra lateral*/
+#sidebar {
+float: left;
+padding-left: 20px;
+width: 270px;
+background: #fff;
+border-right: 4px #1F4677 solid;
+}
+
+/* pie de página*/
+footer {
+width: 940px;
+margin: 0 auto;
+clear: both;  /* No permite elementos flotantes despues del pie de página */
+}
+
+/* Todas las eqiuetas de titulos */
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: bold;
+clear: both; /* No permite elementos flotantes despues de un titulo */
+color: #333;
+}
+
+/* Enlaces tanto visitados como sin visitar */
+a:link, a:visited {
+color:#1F4677;
+text-decoration: none;
+}
+
+/* Cuando el ratón se situa sobre un enlace o este esta activo*/
+a:hover, a:active {
+color: #333;
+text-decoration: underline;
+}
+
+/* Todos los parrafos */
+p {
+margin-bottom: 18px;
+}
+
+/* Todas las listas */
+li {
+padding-left: 5px;
+}
+
+/* menu Superior */
+
+nav .menu {
+font-size: 18px;
+font-weight: bold;
+}
+
+/* Lista menu superiro */
+nav .menu ul {
+margin: 0;
+padding: 25px 0 0 20px;
+list-style: none;
+line-height: normal;
+}
+
+/* Elementos de la lista del menu superiro */
+nav .menu li {
+display: block;
+float: left;
+}
+
+/* Enlaces del menu */
+nav .menu a {
+display: block;
+float: left;
+margin-right: 5px;
+padding: 0px 15px;
+text-decoration: none;
+color: #1F4677;
+}
+
+/* Al situarse encima del enlace le pone una línea horizontal */
+nav .menu a:hover {
+text-decoration: underline;
+}
+
+/** Cabecera*/
+/* imagen de la cabecera */
+#plandesign {
+position: absolute;
+top: 10px;
+right: 2px;
+}
+
+/* Titulos de cabecera y parrafos de cabecera */
+header h1, header p {
+margin: 0;
+padding: 0 0 0 30px;
+line-height: normal;
+}
+
+/* Titulos de cabecera */
+header h1 { 	
+float: left;
+padding-top: 20px; 
+}
+
+/* Titulos de cabecera, enlaces y enlaces ya visitados*/
+header h1 a:link, header h1 a:visited {
+text-decoration: none;
+color: #333;
+}
+
+/* pasar el ratón sobre en titulode cabecera o un link */
+header h1 a:hover { 
+text-decoration: underline; 
+}
+
+/* parrafos de cabecera */
+
+header p {
+padding: 80px 0 0 30px;
+width: 500px;
+font-style: italic;
+font-size: 14px;
+color: #333;
+}
+
+/** Imagenes de los articulos **/
+article img {
+border: none;
+-webkit-box-shadow: 3px 3px 7px #777;
+-moz-box-shadow: 3px 3px 7px #777;
+}
+
+
+#content p, ul, ol, hr {
+margin-bottom: 24px;
+}
+
+/* Elementos de lista en general */
+#content ul ul, ol ol, ul ol, ol ul {
+margin-bottom: 0;
+}
+/* Todos los titulos del cuerpo */
+#content h1, h2, h3, h4, h5, h6 {
+color: #333;
+margin: 0 0 20px 0;
+line-height: 1.5em;
+}
+
+
+/* sidebar and footer widget blocks */
+
+/* Titulo barra lateral */
+aside h3 {
+font-size: 18px;
+}
+
+/* Listas de las barras laterales*/
+aside ul {
+list-style: inside;
+color: #333;
+margin-bottom: 20px;
+margin-top: -15px;
+}
+
+/* Pie de página */
+#footer-area {
+background: #D2E1F6;
+color: #333;
+font-size: 90%;
+padding: 18px 0;
+overflow: hidden;
+}
+
+/* Cada columna del pie de página */
+.footer-segment {
+float: left;
+margin-right: 20px;
+margin-left: 20px;
+width: 190px;
+}
+
+/* Titulo del pie de página */
+footer aside h4 {
+color: #333;
+font-size: 16px;
+line-height: 1.5em;
+}
+
+/* Parrafos del pie de página */
+footer p {
+margin-top: -15px;
+}
